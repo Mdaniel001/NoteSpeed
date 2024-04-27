@@ -58,14 +58,8 @@ public class Registro extends AppCompatActivity {
         });
         initObject();
 
-        //Enlace Boton Registro huella con su Metodo
 
-        btnRegistroHuella.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                registrarHuella();
-            }
-        });
+
 
         //Enlace Boton Foto con su Metodo
 
@@ -78,31 +72,8 @@ public class Registro extends AppCompatActivity {
 
     }
 
-    //Metodo Registrar Huella
-    private void registrarHuella() {
-        BiometricManager biometricManager = BiometricManager.from(this);
-        BiometricPrompt biometricPrompt = new BiometricPrompt(this, ContextCompat.getMainExecutor(this),
-                new BiometricPrompt.AuthenticationCallback() {
-                    @Override
-                    public void onAuthenticationSucceeded(BiometricPrompt.AuthenticationResult result) {
-                        super.onAuthenticationSucceeded(result);
-                        Toast.makeText(Registro.this, "Huella registrada con éxito", Toast.LENGTH_SHORT).show();
-                        // Guardar la huella en la base de datos o en SharedPreferences
-                    }
-                    @Override
-                    public void onAuthenticationFailed() {
-                        super.onAuthenticationFailed();
-                        Toast.makeText(Registro.this, "No se pudo registrar la huella", Toast.LENGTH_SHORT).show();
-                    }
-                });
-             BiometricPrompt promptInfo = new Builder()
-                .setTitle("Registro de huella")
-                .setSubtitle("Coloque su dedo en el lector de huellas")
-                .setNegativeButtonText("Cancelar")
-                .build();
 
-        biometricPrompt.authenticate(promptInfo);
-    }
+
 
     //Metodo Tomar Foto
 
