@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/notas"
+    tools:context=".EditarNotaNumerica">
+
+    <ImageView
+        android:id="@+id/ivUsuario8"
+        android:layout_width="81dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/ivUsuario8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/etIngresoTexto"
+        android:layout_width="388dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginBottom="464dp"
+        android:background="@drawable/edittext_naranja"
+        android:hint="@string/etIngresoTexto"
+        android:inputType="textMultiLine"
+        android:textColorHint="#080909"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnEnumerarTexto"
+        android:layout_width="219dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginEnd="114dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#877B7B"
+        android:text="Enumerar texto"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvTextoEnumerado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTextoEnumerado"
+        android:layout_width="393dp"
+        android:layout_height="147dp"
+        android:layout_marginTop="428dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivNotaEnumerada3"
+        android:layout_width="72dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/ivNotaEnumerada3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/diario" />
+
+    <ImageButton
+        android:id="@+id/btnSelecColor3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:contentDescription="@string/btnSelectocolor3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/cromatico" />
+
+    <Button
+        android:id="@+id/btnGuardarNotaNumerica"
+        android:layout_width="171dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="44dp"
+        android:backgroundTint="#877B7B"
+        android:text="@string/btnGuardarNotaNumerica"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTituloNotaEnumerada2"
+        android:layout_width="194dp"
+        android:layout_height="92dp"
+        android:text="@string/tvTituloNotaEnumerada2"
+        android:textAlignment="center"
+        android:textColor="#0E0909"
+        android:textColorHint="#201C1C"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.011" />
+
+    <EditText
+        android:id="@+id/etNombreNotaNumerica"
+        android:layout_width="248dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="156dp"
+        android:background="@drawable/editext_gris"
+        android:ems="10"
+        android:hint="@string/etNombreNotaEnumerada"
+        android:inputType="text"
+        android:textColorHint="#090606"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

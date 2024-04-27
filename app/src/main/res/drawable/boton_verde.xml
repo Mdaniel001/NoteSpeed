@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Color de fondo -->
+    <solid android:color="@android:color/white" />
+
+    <!-- Bordes redondeados -->
+    <corners android:radius="25dp" />
+
+    <!-- Color del borde y ancho -->
+    <stroke
+        android:width="10dp"
+        android:color="@android:color/holo_green_dark" />
+
+</selector>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/notas"
+    tools:context=".PaginaPrincipal">
+
+    <ImageView
+        android:id="@+id/ivUsuario8"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:contentDescription="@string/ivUsuario2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.941"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/tvSaludo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/tvSaludo2"
+        android:textColor="#0B0A0A"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnIngresoNotas"
+        android:layout_width="187dp"
+        android:layout_height="152dp"
+        android:layout_marginBottom="480dp"
+        android:backgroundTint="#F9B233"
+        android:text="@string/btnIngresoNotas"
+        android:textColor="#0C0808"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnIngresoListas"
+        android:layout_width="177dp"
+        android:layout_height="153dp"
+        android:layout_marginBottom="312dp"
+        android:backgroundTint="#89BF17"
+        android:text="@string/btnIngresoListas"
+        android:textColor="#0E0B0B"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivListas"
+        android:layout_width="32dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="324dp"
+        android:contentDescription="@string/ivListas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/lista" />
+
+    <ImageView
+        android:id="@+id/ivNotas"
+        android:layout_width="41dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="488dp"
+        android:contentDescription="@string/ivNotas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/nota" />
+
+    <Button
+        android:id="@+id/btnIngresoRecordatorio"
+        android:layout_width="184dp"
+        android:layout_height="149dp"
+        android:layout_marginBottom="152dp"
+        android:backgroundTint="#877B7B"
+        android:text="@string/btnIngresoRecordatorio"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivTitulo6"
+        android:layout_width="308dp"
+        android:layout_height="77dp"
+        android:layout_marginBottom="40dp"
+        android:contentDescription="@string/ivTitulo6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.623"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/titulo" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="31dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="168dp"
+        android:contentDescription="@string/ivRecordatorio"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/diario" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

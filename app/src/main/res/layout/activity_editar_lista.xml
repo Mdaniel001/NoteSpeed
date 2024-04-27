@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/notas"
+    tools:context=".EditarLista">
+
+    <TextView
+        android:id="@+id/tvTituloLista2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="740dp"
+        android:contentDescription="@string/ivLista"
+        android:text="@string/tvTituloLista"
+        android:textColor="#090909"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivUsuario8"
+        android:layout_width="81dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/ivUsuario6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.913"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivLista"
+        android:layout_width="53dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/ivLista3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.244"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lista" />
+
+    <Button
+        android:id="@+id/btnGuardarLista"
+        android:layout_width="186dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="724dp"
+        android:backgroundTint="#89BF17"
+        android:text="@string/btnGuardarLista"
+        android:textColor="#121111"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.874"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/btnSelecColor"
+        android:layout_width="70dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="28dp"
+        android:contentDescription="@string/btnSelecColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/cromatico" />
+
+    <EditText
+        android:id="@+id/etDescripcionTarea"
+        android:layout_width="371dp"
+        android:layout_height="77dp"
+        android:ems="10"
+        android:hint="@string/etDescripcionTarea"
+        android:inputType="text"
+        android:textColorHint="#0B0808"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.327" />
+
+    <EditText
+        android:id="@+id/etNombreLista"
+        android:layout_width="211dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="96dp"
+        android:ems="10"
+        android:hint="@string/etNombreLista"
+        android:inputType="text"
+        android:textColorHint="#100E0E"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.401"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/eNombreTarea"
+        android:layout_width="133dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="188dp"
+        android:ems="10"
+        android:hint="@string/etNombreTarea"
+        android:inputType="text"
+        android:textColorHint="#0B0909"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.011"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etFechaTarea"
+        android:layout_width="117dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="188dp"
+        android:ems="10"
+        android:hint="@string/etFechaLista"
+        android:inputType="date"
+        android:textColorHint="#0E0707"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnEnumerarTexto"
+        android:layout_width="132dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="188dp"
+        android:backgroundTint="#89BF17"
+        android:text="@string/btnNotificarTarea"
+        android:textColor="#0B0909"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.969"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

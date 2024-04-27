@@ -1,0 +1,132 @@
+<resources>
+    <string name="app_name">NoteSpeed</string>
+    <string name="ivLogo"></string>
+    <string name="ivTitulo"></string>
+    <string name="tvFrase">Tu vida a Tiempo</string>
+    <string name="etUsuario">Usuario</string>
+    <string name="etContraseña">Contraseña</string>
+    <string name="btnHuella">Ingresa con tu Huella</string>
+    <string name="btnIngresar">Ingresar</string>
+    <string name="btnRegistrarse">Registrarse</string>
+    <!--
+    Pantalla Registro Usuario
+    -->
+    <string name="ivLogo2"></string>
+    <string name="ivTitulo2"></string>
+    <string name="tvFrase2">Crea Tu Cuenta</string>
+    <string name="etNombres">Nombres</string>
+    <string name="etApellidos">Apellidos</string>
+    <string name="etEmail">Correo</string>
+    <string name="etContraseña1">Contraseña</string>
+    <string name="etContraseña2">Confirme Contraseña</string>
+    <string name="btnRegistroHuella">Registra tu Huella</string>
+    <string name="btnFoto">Adjunta tu Foto </string>
+    <string name="btnRegistrarse1">Registrarse</string>
+    <!--
+    Pantalla Registro Exitoso
+    -->
+    <string name="ivLogo3"></string>
+    <string name="tvTitulo3">Tu registro ha sido exitoso! </string>
+    <string name="btnSiguiente">Siguiente</string>
+    <!--
+    Pantalla Bienvenida
+    -->
+    <string name="ivLogoEstrella"></string>
+    <string name="tvTitulo4">Bienvenid@  a</string>
+    <string name="ivTitulo4"></string>
+    <string name="tvSaludo">Hola ! </string>
+    <string name="ivUsuario">Imagen del Usuario </string>
+    <string name="btnSiguiente2">Siguiente</string>
+    <string name="tvFrase3">Tu Vida a Tiempo  </string>
+
+    <!--
+    Pantalla Principal
+    -->
+    <string name="ivTitulo6"></string>
+    <string name="tvSaludo2">Hola ! </string>
+    <string name="ivNotas"></string>
+    <string name="ivListas"></string>
+    <string name="ivRecordatorio"></string>
+    <string name="ivUsuario2">Imagen del Usuario </string>
+    <string name="btnIngresoNotas">Lleva tus notas</string>
+    <string name="btnIngresoListas">Lista tus Tareas</string>
+    <string name="btnIngresoRecordatorio">Lista tus notas</string>
+
+    <!--
+    Pantalla Crear Nota
+    -->
+    <string name="tvTituloNota"> NOTAS </string>
+    <string name="svNota">Buscar Nota  </string>
+    <string name="ivNotas2"></string>
+    <string name="ivNotas3"></string>
+    <string name="ivTitulo7"></string>
+    <string name="ivUsuario3">Imagen del Usuario </string>
+    <string name="btnInsertarNota">Insertar</string>
+
+    <!--
+    Pantalla Editar Nota
+    -->
+
+    <string name="tvTituloNota2"> NOTAS </string>
+    <string name="etNota">Escribe tu nota aquí...</string>
+    <string name="ivNotas4"></string>
+    <string name="ivUsuario4">Imagen del Usuario </string>
+    <string name="btnGuardarNota">Guardar</string>
+    <string name="etNombreNota">Ingrese Titulo </string>
+    <string name="etFecha">Fecha </string>
+    <string name="btnSelecColor">Seleccionar Color</string>
+
+    <!--
+    Pantalla Crear Lista
+    -->
+    <string name="tvTituloLista">TAREAS </string>
+    <string name="ivLista">Imagen Lista</string>
+    <string name="ivLista2">Imagen Lista</string>
+    <string name="tvTitulo7">TAREAS </string>
+    <string name="ivUsuario5">Imagen Usuario </string>
+    <string name="btnInsertarLista">Insertar </string>
+    <!--
+   Pantalla Editar Lista
+   -->
+    <string name="tvTituloLista2"> LISTA </string>
+    <string name="ivLista3">Imagen Lista</string>
+    <string name="ivUsuario6">Imagen Usuario </string>
+    <string name="btnSelecColo2">Seleccionar Color</string>
+    <string name="btnGuardarLista">Guardar</string>
+    <string name="etNombreLista">Nombre Lista</string>
+    <string name="etDescripcionTarea">Describe tu Tarea ....</string>
+    <string name="etFechaLista">Fecha..</string>
+    <string name="etNombreTarea">Nombre Tarea..</string>
+    <string name="btnNotificarTarea">Notificar</string>
+
+    <!--
+  Pantalla Crear Lista
+  -->
+    <string name="tvTituloNotaEnumerada">Enumera tus Notas </string>
+    <string name="ivNotaEnumerada">Imagen Nota Enumerada</string>
+    <string name="ivNotaEnumerada2">Imagen Lista</string>
+    <string name="tvTitulo8">TAREAS </string>
+    <string name="ivUsuario7">Imagen Usuario </string>
+    <string name="btnInsertarNotaEnumerada">Insertar </string>
+
+    <!--
+ Pantalla Crear Lista
+ -->
+    <string name="btnSelectocolor3">selecciona color </string>
+    <string name="btnEnumerarTexto">Enumerar Texto </string>
+    <string name="btnGuardarNotaNumerica">Guardar </string>
+    <string name="etIngresoTexto">Ingreso Texto...</string>
+    <string name="etNombreNotaEnumerada">Nombre Nota...</string>
+    <string name="ivNotaEnumerada3">  Logo </string>
+    <string name="ivUsuario8">Imagen Usuario </string>
+    <string name="tvTituloNotaEnumerada2">Enumera tus Notas </string>
+    <string name="tvTextoEnumerado"> Aqui se mostrara tu Texto Enumerado</string>
+
+
+
+
+
+
+
+
+</resources>
