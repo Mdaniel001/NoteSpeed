@@ -8,6 +8,10 @@
     <string name="btnHuella">Ingresa con tu Huella</string>
     <string name="btnIngresar">Ingresar</string>
     <string name="btnRegistrarse">Registrarse</string>
+    <string name="ivUsuarioInicio">usuario</string>
+    <string name="ivPassword">cotraseña</string>
+    <string name="ivHuella">Huella</string>
+
     <!--
     Pantalla Registro Usuario
     -->
@@ -22,6 +26,14 @@
     <string name="btnRegistroHuella">Registra tu Huella</string>
     <string name="btnFoto">Adjunta tu Foto </string>
     <string name="btnRegistrarse1">Registrarse</string>
+    <string name="ivPassword2">contraseña</string>
+    <string name="ivPassword3">contraseña</string>
+    <string name="ivCorreo">correo</string>
+    <string name="ivCuenta">cuenta</string>
+    <string name="ivFoto1">foto</string>
+
+
+
     <!--
     Pantalla Registro Exitoso
     -->
