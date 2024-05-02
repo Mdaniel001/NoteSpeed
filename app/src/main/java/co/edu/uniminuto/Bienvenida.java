@@ -1,6 +1,9 @@
 package co.edu.uniminuto;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Bienvenida extends AppCompatActivity {
 
+    private Button btnSiguiente2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,5 +24,21 @@ public class Bienvenida extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        initObject();
+        btnSiguiente2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                irPatanllaPrincipal();
+            }
+        });
     }
+
+    private void initObject(){
+        btnSiguiente2 = findViewById(R.id.btnSiguiente2);
+    }
+    private void irPatanllaPrincipal(){
+        Intent intent = new Intent(this, PaginaPrincipal.class);
+        startActivity(intent);
+    }
+
 }

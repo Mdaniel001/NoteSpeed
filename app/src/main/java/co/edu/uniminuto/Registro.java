@@ -1,13 +1,19 @@
 package co.edu.uniminuto;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.hardware.biometrics.BiometricManager;
 import android.hardware.biometrics.BiometricPrompt;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.ContactsContract;
 import android.provider.MediaStore;
+import android.text.TextUtils;
+import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,6 +28,16 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
+import co.edu.uniminuto.entity.User;
+import co.edu.uniminuto.model.UserDao;
 
 public class Registro extends AppCompatActivity {
     //Creo Objetos
@@ -36,7 +52,15 @@ public class Registro extends AppCompatActivity {
     private Button btnRegistroHuella;
     private Button btnFoto;
     private byte[] imagenBytes;
+    private Button btnRegistrarUsuario;
 
+    private String nombres;
+    private String apellidos;
+    private String correo;
+    private String contrasena;
+    private String confirmarContrasena;
+    private String link_imagen;
+    private Context context;
 
 
 
@@ -57,8 +81,17 @@ public class Registro extends AppCompatActivity {
             return insets;
         });
         initObject();
+        context = this;
 
-
+        // Enlace Boton Registrarse con su Metodo
+        btnRegistrarUsuario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (getData()) {
+                    createUser(v);// Llama al método para registrar el usuario
+                }
+            }
+        });
 
 
         //Enlace Boton Foto con su Metodo
@@ -70,10 +103,8 @@ public class Registro extends AppCompatActivity {
             }
         });
 
+
     }
-
-
-
 
     //Metodo Tomar Foto
 
@@ -82,34 +113,82 @@ public class Registro extends AppCompatActivity {
         startActivityForResult(intent, 1);
     }
 
-    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1 && resultCode == Activity.RESULT_OK) {
             Bitmap bitmap = (Bitmap) data.getExtras().get("data");
             ivFoto.setImageBitmap(bitmap);
-            ByteArrayOutputStream bos = new ByteArrayOutputStream();
-            bitmap.compress(Bitmap.CompressFormat.PNG, 100, bos);
-            imagenBytes = bos.toByteArray();
+            guardarImagen(bitmap);
+        }
+    }
+
+    private void guardarImagen(Bitmap bitmap) {
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
+        String imageFileName = "JPEG_" + timeStamp + "_";
+
+        // Guardar la imagen en el directorio de almacenamiento externo
+        File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+        File imageFile = new File(storageDir, imageFileName + ".jpg");
+
+        try {
+            FileOutputStream fos = new FileOutputStream(imageFile);
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos);
+            fos.flush();
+            fos.close();
+            Toast.makeText(this, "Imagen guardada en: " + imageFile.getAbsolutePath(), Toast.LENGTH_SHORT).show();
+
+            // Guardar la URL de la imagen en la variable link_imagen
+            link_imagen = imageFile.getAbsolutePath();
+        } catch (IOException e) {
+            e.printStackTrace();
+            Log.e("Error", "Error al guardar la imagen: " + e.getMessage());
+            Toast.makeText(this, "Error al guardar la imagen", Toast.LENGTH_SHORT).show();
         }
     }
 
 
 
-    //Metodo para Registar Usuario
-    public void registrarUsuario(View view) {
-        String nombres = etNombres.getText().toString();
-        String apellidos = etApellidos.getText().toString();
-        String correo = etEmail.getText().toString();
-        String contrasena = etContraseña1.getText().toString();
-        String confirmarContrasena = etContraseña2.getText().toString();
 
-        if (contrasena.equals(confirmarContrasena)) {
-            // Guardar los datos en la base de datos o en SharedPreferences
-            Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
+    //Método para obtener los datos ingresados por el usuario
+    public boolean getData() {
+        nombres = etNombres.getText().toString();
+        apellidos = etApellidos.getText().toString();
+        correo = etEmail.getText().toString();
+        contrasena = etContraseña1.getText().toString();
+        confirmarContrasena = etContraseña2.getText().toString();
+
+        if (TextUtils.isEmpty(nombres) || TextUtils.isEmpty(apellidos) || TextUtils.isEmpty(correo) ||
+                TextUtils.isEmpty(contrasena) || TextUtils.isEmpty(confirmarContrasena)) {
+            Toast.makeText(this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show();
+            return false;
         }
+
+        if (!Patterns.EMAIL_ADDRESS.matcher(correo).matches()) {
+            Toast.makeText(this, "Ingrese una dirección de correo electrónico válida", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        if (!contrasena.equals(confirmarContrasena)) {
+            Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        if (contrasena.length() < 6) {
+            Toast.makeText(this, "La contraseña debe tener al menos 6 caracteres", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        return true;
+    }
+
+    //Metodo para Registar Usuario
+    private void createUser(View view){
+        getData();
+        String linkImagen = link_imagen;
+        User user = new User(nombres,apellidos,correo,contrasena,confirmarContrasena,linkImagen);
+        UserDao userDao = new UserDao(context, view);
+        userDao.insertUser(user);
+
     }
 
 
@@ -128,6 +207,8 @@ public class Registro extends AppCompatActivity {
         etContraseña2 = findViewById(R.id.etContraseña2);
         btnRegistroHuella = findViewById(R.id.btnRegistroHuella);
         btnFoto = findViewById(R.id.btnFoto);
+        btnRegistrarUsuario = findViewById(R.id.btnRegistrarUsuario);
+        ivFoto = findViewById(R.id.ivFoto);
     }
 
 

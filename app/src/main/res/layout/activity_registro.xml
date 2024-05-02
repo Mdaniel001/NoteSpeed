@@ -66,6 +66,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnRegistroHuella" />
+    <ImageView
+        android:id="@+id/ivFoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:contentDescription="Foto"
+        app:layout_constraintTop_toBottomOf="@+id/btnFoto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/etContraseña1"
@@ -141,19 +150,17 @@
         app:layout_constraintTop_toBottomOf="@+id/etNombres" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnRegistrarUsuario"
         android:layout_width="191dp"
         android:layout_height="56dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="#89BF17"
         android:text="@string/btnRegistrarse1"
         android:textColor="#070707"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/ivTitulo2"
