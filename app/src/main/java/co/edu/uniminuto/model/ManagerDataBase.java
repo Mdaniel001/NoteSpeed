@@ -1,6 +1,7 @@
 package co.edu.uniminuto.model;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase;
 
@@ -40,4 +41,15 @@ public class ManagerDataBase extends SQLiteOpenHelper{
         db.execSQL(DELETE_TABLE_NOTES);
         onCreate(db);
     }
+
+    public boolean checkLogin(String email, String password) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT * FROM " + TABLE_USERS +
+                " WHERE use_email = ? AND use_password = ?";
+        Cursor cursor = db.rawQuery(query, new String[]{email, password});
+        int count = cursor.getCount();
+        cursor.close();
+        return count > 0;
+    }
+
 }
