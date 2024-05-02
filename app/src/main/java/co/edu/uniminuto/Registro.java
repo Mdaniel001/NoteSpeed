@@ -4,12 +4,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.hardware.biometrics.BiometricManager;
-import android.hardware.biometrics.BiometricPrompt;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.provider.ContactsContract;
 import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.util.Log;
@@ -22,14 +18,11 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -49,7 +42,7 @@ public class Registro extends AppCompatActivity {
     private EditText etContraseña2;
 
     private ImageView ivFoto;
-    private Button btnRegistroHuella;
+
     private Button btnFoto;
     private byte[] imagenBytes;
     private Button btnRegistrarUsuario;
@@ -204,9 +197,8 @@ public class Registro extends AppCompatActivity {
         etApellidos = findViewById(R.id.etApellidos);
         etEmail = findViewById(R.id.etEmail);
         etContraseña1 = findViewById(R.id.etContraseña1);
-        etContraseña2 = findViewById(R.id.etContraseña2);
-        btnRegistroHuella = findViewById(R.id.btnRegistroHuella);
-        btnFoto = findViewById(R.id.btnFoto);
+        etContraseña2 = findViewById(R.id.ivPassword3);
+                btnFoto = findViewById(R.id.btnFoto);
         btnRegistrarUsuario = findViewById(R.id.btnRegistrarUsuario);
         ivFoto = findViewById(R.id.ivFoto);
     }

@@ -25,7 +25,7 @@
         android:id="@+id/etNombres"
         android:layout_width="327dp"
         android:layout_height="60dp"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="180dp"
         android:autofillHints="familyName"
         android:background="@drawable/editext_blanco"
         android:ems="10"
@@ -36,69 +36,14 @@
         android:textColorHint="#0C0C0C"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnRegistroHuella"
-        android:layout_width="324dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="@string/btnRegistroHuella"
-        android:textColor="#0B0A0A"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.523"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etContraseña2" />
-
-    <Button
-        android:id="@+id/btnFoto"
-        android:layout_width="321dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="@string/btnFoto"
-        android:textColor="#070707"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRegistroHuella" />
-    <ImageView
-        android:id="@+id/ivFoto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        android:contentDescription="Foto"
-        app:layout_constraintTop_toBottomOf="@+id/btnFoto"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
     <EditText
-        android:id="@+id/etContraseña1"
-        android:layout_width="325dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="12dp"
-        android:autofillHints="password"
-        android:background="@drawable/editext_blanco"
-        android:ems="10"
-        android:hint="@string/etContraseña1"
-        android:importantForAutofill="yes"
-        android:inputType="textPassword"
-        android:textAlignment="center"
-        android:textColorHint="#090707"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
-
-    <EditText
-        android:id="@+id/etContraseña2"
-        android:layout_width="325dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="12dp"
+        android:id="@+id/ivPassword3"
+        android:layout_width="326dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
         android:autofillHints="password"
         android:background="@drawable/editext_blanco"
         android:ems="10"
@@ -109,7 +54,7 @@
         android:textColorHint="#090808"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etContraseña1" />
 
@@ -126,7 +71,7 @@
         android:textColorHint="#0E0B0B"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintHorizontal_bias="0.43"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etApellidos" />
 
@@ -134,7 +79,7 @@
         android:id="@+id/etApellidos"
         android:layout_width="327dp"
         android:layout_height="60dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:autofillHints="familyName"
         android:background="@drawable/editext_blanco"
         android:ems="10"
@@ -148,6 +93,48 @@
         app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNombres" />
+
+    <EditText
+        android:id="@+id/etContraseña1"
+        android:layout_width="325dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:autofillHints="password"
+        android:background="@drawable/editext_blanco"
+        android:ems="10"
+        android:hint="@string/etContraseña1"
+        android:importantForAutofill="yes"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColorHint="#090707"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+    <Button
+        android:id="@+id/btnFoto"
+        android:layout_width="333dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="@string/btnFoto"
+        android:textColor="#070707"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPassword3" />
+
+    <ImageView
+        android:id="@+id/ivFoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:contentDescription="Foto"
+        app:layout_constraintTop_toBottomOf="@+id/btnFoto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/btnRegistrarUsuario"
@@ -172,7 +159,7 @@
         app:layout_constraintHorizontal_bias="0.105"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/imagen" />
+        app:srcCompat="@drawable/imagen5" />
 
     <TextView
         android:id="@+id/tvFrase2"
@@ -181,13 +168,72 @@
         android:layout_marginTop="4dp"
         android:importantForAccessibility="yes"
         android:text="@string/tvFrase2"
-        android:textAlignment="center"
         android:textColor="#070707"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivTitulo2" />
+
+    <ImageView
+        android:id="@+id/ivFoto1"
+        android:layout_width="40dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/ivFoto1"
+        app:layout_constraintBottom_toBottomOf="@+id/btnFoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="@+id/btnFoto"
+        app:srcCompat="@drawable/foto" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="33dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="12dp"
+        android:contentDescription="@string/ivPassword3"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPassword3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintStart_toStartOf="@+id/ivPassword3"
+        app:srcCompat="@drawable/password" />
+
+    <ImageView
+        android:id="@+id/ivPassword2"
+        android:layout_width="33dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/ivPassword2"
+        app:layout_constraintBottom_toBottomOf="@+id/etContraseña1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintStart_toStartOf="@+id/etContraseña1"
+        app:srcCompat="@drawable/password" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="34dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/ivCorreo"
+        app:layout_constraintBottom_toBottomOf="@+id/etEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toStartOf="@+id/etEmail"
+        app:srcCompat="@drawable/email" />
+
+    <ImageView
+        android:id="@+id/ivCuenta"
+        android:layout_width="56dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="84dp"
+        android:contentDescription="@string/ivCuenta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintStart_toStartOf="@+id/tvFrase2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cuenta" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
