@@ -17,6 +17,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.biometric.BiometricManager;
 import androidx.biometric.BiometricPrompt;
 
+import co.edu.uniminuto.model.ManagerDataBase;
+
 public class MainActivity extends AppCompatActivity {
     //Creamos Objetos
     private Button btnRegistrarse;
@@ -25,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText etContraseña;
     private  Button btnHuella;
 
+    private String usuario;
+    private String password;
 
 
 
@@ -72,13 +76,21 @@ public class MainActivity extends AppCompatActivity {
     //Metodo Iniciar Sesion
 
     private void iniciarSesion() {
-        String correo = etUsurio.getText().toString();
-        String contrasena = etContraseña.getText().toString();
+        usuario = etUsurio.getText().toString();
+        password = etContraseña.getText().toString();
 
-        // Verificar si el correo y contraseña coinciden con los registrados
-        // Si coinciden, iniciar sesión
-        Toast.makeText(this, "Iniciando sesión...", Toast.LENGTH_SHORT).show();
+        ManagerDataBase managerDataBase = new ManagerDataBase(this);
+        if (managerDataBase.checkLogin(usuario, password)) {
+            Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
+
+            Intent intent = new Intent(this, Bienvenida.class);
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "Correo o contraseña incorrectos", Toast.LENGTH_SHORT).show();
+        }
     }
+
+
 
 
     //metodo de inicio session con huella
@@ -92,6 +104,8 @@ public class MainActivity extends AppCompatActivity {
                         super.onAuthenticationSucceeded(result);
                         Toast.makeText(MainActivity.this, "Huella verificada con éxito", Toast.LENGTH_SHORT).show();
                         // Iniciar sesión
+                        Intent intent = new Intent(MainActivity.this, Bienvenida.class);
+                        startActivity(intent);
                     }
 
                     @Override

@@ -6,16 +6,26 @@ public class User {
     private String email;
     private String password;
     private String passwordConfirm;
+    private String linkImagen;
 
-    public User(String names, String lastNames, String email, String password, String passwordConfirm) {
+    public User(String names, String lastNames, String email, String password, String passwordConfirm, String linkImagen) {
         this.names = names;
         this.lastNames = lastNames;
         this.email = email;
         this.password = password;
         this.passwordConfirm = passwordConfirm;
+        this.linkImagen = linkImagen;
     }
 
     public User() {
+    }
+
+    public String getLink_imagen() {
+        return linkImagen;
+    }
+
+    public void setLink_imagen(String link_imagen) {
+        this.linkImagen = link_imagen;
     }
 
     public String getNames() {
@@ -66,6 +76,7 @@ public class User {
         sb.append(", email='").append(email).append('\'');
         sb.append(", password='").append(password).append('\'');
         sb.append(", passwordConfirm='").append(passwordConfirm).append('\'');
+        sb.append(", linkImagen='").append(linkImagen).append('\'');
         sb.append('}');
         return sb.toString();
     }
