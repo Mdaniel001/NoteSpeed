@@ -74,6 +74,8 @@
     <string name="ivTitulo7"></string>
     <string name="ivUsuario3">Imagen del Usuario </string>
     <string name="btnInsertarNota">Insertar</string>
+    <string name="lvNotas">Lista de Notas</string>
+
 
     <!--
     Pantalla Editar Nota
@@ -87,6 +89,8 @@
     <string name="etNombreNota">Ingrese Titulo </string>
     <string name="etFecha">Fecha </string>
     <string name="btnSelecColor">Seleccionar Color</string>
+    <string name="lvListaTareas">Tareas</string>
+
 
     <!--
     Pantalla Crear Lista
@@ -112,7 +116,7 @@
     <string name="btnNotificarTarea">Notificar</string>
 
     <!--
-  Pantalla Crear Lista
+  Pantalla Crear Nota Enumerada
   -->
     <string name="tvTituloNotaEnumerada">Enumera tus Notas </string>
     <string name="ivNotaEnumerada">Imagen Nota Enumerada</string>
@@ -120,9 +124,11 @@
     <string name="tvTitulo8">TAREAS </string>
     <string name="ivUsuario7">Imagen Usuario </string>
     <string name="btnInsertarNotaEnumerada">Insertar </string>
+    <string name="lvNotaEnumerada">Tareas</string>
+
 
     <!--
- Pantalla Crear Lista
+ Pantalla Editar Nota Enumerada
  -->
     <string name="btnSelectocolor3">selecciona color </string>
     <string name="btnEnumerarTexto">Enumerar Texto </string>
