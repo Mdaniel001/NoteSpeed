@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //Metodo Iniciar Sesion
+    //Metodo Iniciar Sesion y paso a Bienvenida
 
     private void iniciarSesion() {
         usuario = etUsurio.getText().toString();
