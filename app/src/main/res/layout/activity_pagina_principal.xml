@@ -86,12 +86,12 @@
         app:srcCompat="@drawable/nota" />
 
     <Button
-        android:id="@+id/btnIngresoRecordatorio"
+        android:id="@+id/btnIngresoNotasEnumeradas"
         android:layout_width="282dp"
         android:layout_height="90dp"
         android:layout_marginBottom="328dp"
         android:backgroundTint="#9C6262"
-        android:text="@string/btnIngresoRecordatorio"
+        android:text="@string/btnIngresoNotasEnumeradas"
         android:textColor="#0E0E0E"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -45,13 +45,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnGuardarLista"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
+        android:id="@+id/btnInsertarLista"
+        android:layout_width="112dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="116dp"
+        android:backgroundTint="#89BF17"
         android:text="@string/btnInsertarLista"
+        android:textColor="#0B0808"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.227"
+        app:layout_constraintHorizontal_bias="0.17"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -97,6 +100,7 @@
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="92dp"
+        android:backgroundTint="#89BF17"
         android:contentDescription="@string/lvListaTareas"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

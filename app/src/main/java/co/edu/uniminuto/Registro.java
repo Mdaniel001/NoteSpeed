@@ -116,6 +116,7 @@ public class Registro extends AppCompatActivity {
     }
 
     private void guardarImagen(Bitmap bitmap) {
+
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
         String imageFileName = "JPEG_" + timeStamp + "_";
 
@@ -138,6 +139,14 @@ public class Registro extends AppCompatActivity {
             Toast.makeText(this, "Error al guardar la imagen", Toast.LENGTH_SHORT).show();
         }
     }
+
+
+
+
+
+
+
+
 
 
 

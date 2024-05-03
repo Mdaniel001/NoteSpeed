@@ -62,7 +62,7 @@
     <string name="ivUsuario2">Imagen del Usuario </string>
     <string name="btnIngresoNotas">Lleva tus notas</string>
     <string name="btnIngresoListas">Lista tus Tareas</string>
-    <string name="btnIngresoRecordatorio">Lista tus notas</string>
+    <string name="btnIngresoNotasEnumeradas">Enumera tus notas</string>
     <string name="ivLogo9">Logo</string>
     <string name="ivLista9">Lista</string>
 

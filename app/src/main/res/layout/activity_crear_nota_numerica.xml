@@ -33,19 +33,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnGuardarLista"
-        android:layout_width="131dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="132dp"
-        android:backgroundTint="#272323"
-        android:text="@string/btnInsertarLista"
-        android:textColorLink="#070303"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.156"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/ivNotaEnumerada"
         android:layout_width="50dp"
@@ -102,6 +89,20 @@
         android:contentDescription="@string/lvNotaEnumerada"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnInsertarNotaEnumerada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="628dp"
+        android:backgroundTint="#B58383"
+        android:text="@string/btnInsertarNotaEnumerada"
+        android:textColor="#130F0F"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.225"
         app:layout_constraintStart_toStartOf="parent" />
 
 
