@@ -112,7 +112,7 @@
         app:srcCompat="@drawable/titulo" />
 
     <ImageView
-        android:id="@+id/ivLista9"
+        android:id="@+id/imageView6"
         android:layout_width="46dp"
         android:layout_height="45dp"
         android:layout_marginBottom="352dp"
@@ -124,11 +124,10 @@
         app:srcCompat="@drawable/diario" />
 
     <ImageView
-        android:id="@+id/ivLogo9"
+        android:id="@+id/imageView3"
         android:layout_width="203dp"
         android:layout_height="179dp"
         android:layout_marginBottom="116dp"
-        android:contentDescription="@string/ivLogo9"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
