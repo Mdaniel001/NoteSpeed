@@ -29,6 +29,8 @@ public class UserDao {
         managerDataBase= new ManagerDataBase(this.context);
     }
 
+
+    //Metodo Insertar  y Guardar Usuario
     public void insertUser(User user) {
         try {
             SQLiteDatabase db = managerDataBase.getWritableDatabase();

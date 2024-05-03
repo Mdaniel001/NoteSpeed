@@ -62,7 +62,7 @@
     <string name="ivUsuario2">Imagen del Usuario </string>
     <string name="btnIngresoNotas">Lleva tus notas</string>
     <string name="btnIngresoListas">Lista tus Tareas</string>
-    <string name="btnIngresoNotasEnumeradas">Enumera tus notas</string>
+    <string name="btnNotasEnumeradas">Enumera tus notas</string>
     <string name="ivLogo9">Logo</string>
     <string name="ivLista9">Lista</string>
 
@@ -79,6 +79,8 @@
     <string name="ivUsuario3">Imagen del Usuario </string>
     <string name="btnInsertarNota">Insertar</string>
     <string name="lvNotas">Lista de Notas</string>
+    <string name="btnEliminarNota">Eliminar </string>
+    <string name="etEliminarNota">Ingrese Nombre </string>
 
 
     <!--
@@ -105,6 +107,10 @@
     <string name="tvTitulo7">TAREAS </string>
     <string name="ivUsuario5">Imagen Usuario </string>
     <string name="btnInsertarLista">Insertar </string>
+    <string name="btnEliminarLista">Eliminar </string>
+    <string name="etEliminarLista">Ingrese Nombre </string>
+
+
     <!--
    Pantalla Editar Lista
    -->
@@ -129,6 +135,8 @@
     <string name="ivUsuario7">Imagen Usuario </string>
     <string name="btnInsertarNotaEnumerada">Insertar </string>
     <string name="lvNotaEnumerada">Tareas</string>
+    <string name="btnEliminarNotaEnumerada">Eliminar </string>
+    <string name="etEliminarNotaEnumerada">Ingrese Nombre </string>
 
 
     <!--

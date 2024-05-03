@@ -8,67 +8,66 @@
     android:background="@drawable/notas"
     tools:context=".CrearLista">
 
-    <ImageView
-        android:id="@+id/ivUsuario8"
-        android:layout_width="81dp"
-        android:layout_height="88dp"
-        android:layout_marginTop="28dp"
-        android:contentDescription="@string/ivUsuario4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.881"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/tvTituloLista2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="716dp"
+        android:layout_marginBottom="696dp"
         android:contentDescription="@string/ivLista"
         android:text="@string/tvTituloLista2"
         android:textColor="#090909"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivLista"
+        android:layout_width="53dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="56dp"
+        android:contentDescription="@string/ivLista"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.229"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lista" />
+
+    <ImageView
+        android:id="@+id/ivUsuario8"
+        android:layout_width="81dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="44dp"
+        android:contentDescription="@string/ivUsuario4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.884"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnInsertarLista"
+        android:layout_width="147dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="144dp"
+        android:backgroundTint="#89BF17"
+        android:text="@string/btnInsertarLista"
+        android:textColor="#0B0808"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <SearchView
         android:id="@+id/searchView"
         style="@style/SearchViewStyle"
         android:layout_width="183dp"
         android:layout_height="44dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="144dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.923"
+        app:layout_constraintHorizontal_bias="0.928"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnInsertarLista"
-        android:layout_width="112dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="116dp"
-        android:backgroundTint="#89BF17"
-        android:text="@string/btnInsertarLista"
-        android:textColor="#0B0808"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.17"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/ivLista"
-        android:layout_width="53dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="40dp"
-        android:contentDescription="@string/ivLista"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.226"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/lista" />
 
     <ImageView
         android:id="@+id/ivTitulo8"
@@ -95,16 +94,45 @@
 
     <ListView
         android:id="@+id/lvListaTareas"
-        android:layout_width="389dp"
-        android:layout_height="539dp"
+        android:layout_width="387dp"
+        android:layout_height="439dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="92dp"
+        android:layout_marginBottom="108dp"
         android:backgroundTint="#89BF17"
         android:contentDescription="@string/lvListaTareas"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnEliminarLista"
+        android:layout_width="148dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="548dp"
+        android:backgroundTint="#89BF17"
+        android:text="@string/btnEliminarLista"
+        android:textColor="#130707"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etEliminarLista"
+        android:layout_width="197dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="548dp"
+        android:ems="10"
+        android:hint="@string/etEliminarLista"
+        android:inputType="text"
+        android:textColor="#171515"
+        android:textColorHint="#0E0C0C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.994"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

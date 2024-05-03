@@ -30,14 +30,14 @@ public class CrearNotaNumerica extends AppCompatActivity {
         //Enlace Boton ir a pantalla editar con su metodo
         btnInsertarNotaEnumerada.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {irPanatllaEditarNotaEnumerada();
+            public void onClick(View v) {irPantallaEditarNotaEnumerada();
 
             }
         });
 
     }
 
-    private void irPanatllaEditarNotaEnumerada() {
+    private void irPantallaEditarNotaEnumerada() {
         Intent intent = new Intent(this, EditarNotaNumerica.class);
         startActivity(intent);
 

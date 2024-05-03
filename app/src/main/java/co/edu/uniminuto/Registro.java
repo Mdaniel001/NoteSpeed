@@ -207,7 +207,7 @@ public class Registro extends AppCompatActivity {
         etEmail = findViewById(R.id.etEmail);
         etContraseña1 = findViewById(R.id.etContraseña1);
         etContraseña2 = findViewById(R.id.ivPassword3);
-                btnFoto = findViewById(R.id.btnFoto);
+        btnFoto = findViewById(R.id.btnFoto);
         btnRegistrarUsuario = findViewById(R.id.btnRegistrarUsuario);
         ivFoto = findViewById(R.id.ivFoto);
     }

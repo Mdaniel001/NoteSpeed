@@ -12,10 +12,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class PaginaPrincipal extends AppCompatActivity {
-private Button btnIngresoNotas;
-private Button btnIngresoListas;
-private Button btnIngresoNotasEnumeradas;
-
+    private Button btnIngresoNotas;
+    private Button btnIngresoListas;
+    private Button btnNotasEnumeradas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,66 +25,37 @@ private Button btnIngresoNotasEnumeradas;
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
-
         });
-        initObject();
+        initObjects();
 
-        //Enlace boton Ingreso Notas con su metodo
-        btnIngresoNotas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {irPantallaNotas();
-            }
-
-        });
-        //Enlace boton Ingreso Notas Enumeradas con su metodo
-        btnIngresoNotasEnumeradas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {irPantallaNotasEnumeradas();
-            }
-
-        });
-
-        //Enlace boton Ingreso Lista Tareas con su metodo
-        btnIngresoListas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {irPantallaListas();
-            }
-
-        });
+        // Initialize button listeners
+        initButtonListeners();
     }
 
+    private void initObjects() {
+        btnIngresoNotas = findViewById(R.id.btnIngresoNotas);
+        btnNotasEnumeradas = findViewById(R.id.btnNotasEnumeradas);
+        btnIngresoListas = findViewById(R.id.btnIngresoListas);
+    }
 
+    private void initButtonListeners() {
+        btnIngresoNotas.setOnClickListener(v -> irPantallaNotas());
+        btnNotasEnumeradas.setOnClickListener(v -> irPantallaNotasEnumeradas());
+        btnIngresoListas.setOnClickListener(v -> irPantallaListas());
+    }
 
-
-
-    ///Metodo ir pantalla Notas Enumeradas
-    private void irPantallaNotasEnumeradas(){
+    private void irPantallaNotasEnumeradas() {
         Intent intent = new Intent(this, CrearNotaNumerica.class);
         startActivity(intent);
     }
 
-    ///Metodo ir pantalla Lista Tareas
-    private void irPantallaListas(){
+    private void irPantallaListas() {
         Intent intent = new Intent(this, CrearLista.class);
         startActivity(intent);
     }
 
-    ///Metodo ir pantalla Notas
-    private void irPantallaNotas(){
+    private void irPantallaNotas() {
         Intent intent = new Intent(this, CrearNota.class);
         startActivity(intent);
-    }
-
-
-
-
-
-
-
-    private void initObject(){
-
-        btnIngresoNotas = findViewById(R.id.btnIngresoNotas);
-        btnIngresoNotasEnumeradas=findViewById(R.id.btnIngresoNotasEnumeradas);
-        btnIngresoListas=findViewById(R.id.btnIngresoListas);
     }
 }
