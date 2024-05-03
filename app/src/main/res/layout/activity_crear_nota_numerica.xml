@@ -35,20 +35,20 @@
 
     <Button
         android:id="@+id/btnGuardarLista"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="131dp"
+        android:layout_height="52dp"
         android:layout_marginTop="132dp"
         android:backgroundTint="#272323"
         android:text="@string/btnInsertarLista"
         android:textColorLink="#070303"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.217"
+        app:layout_constraintHorizontal_bias="0.156"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/ivNotaEnumerada"
-        android:layout_width="48dp"
+        android:layout_width="50dp"
         android:layout_height="61dp"
         android:layout_marginTop="32dp"
         android:contentDescription="@string/ivNotaEnumerada"
