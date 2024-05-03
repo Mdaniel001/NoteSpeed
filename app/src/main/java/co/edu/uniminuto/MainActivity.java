@@ -2,6 +2,7 @@ package co.edu.uniminuto;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,6 +18,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.biometric.BiometricManager;
 import androidx.biometric.BiometricPrompt;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 import co.edu.uniminuto.model.ManagerDataBase;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     private String usuario;
     private String password;
+
 
 
 
@@ -78,9 +83,10 @@ public class MainActivity extends AppCompatActivity {
     private void iniciarSesion() {
         usuario = etUsurio.getText().toString();
         password = etContraseña.getText().toString();
+        String hashedPassword = hashPassword(password);
 
         ManagerDataBase managerDataBase = new ManagerDataBase(this);
-        if (managerDataBase.checkLogin(usuario, password)) {
+        if (managerDataBase.checkLogin(usuario, hashedPassword)) {
             Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
 
             Intent intent = new Intent(this, Bienvenida.class);
@@ -145,6 +151,18 @@ public class MainActivity extends AppCompatActivity {
         etContraseña=findViewById(R.id.etContraseña);
         etUsurio=findViewById(R.id.etUsuario);
         btnHuella=findViewById(R.id.btnHuella);
+    }
+
+    // Método para hashear la contraseña utilizando SHA-256
+    private String hashPassword(String password) {
+        try {
+            MessageDigest digest = MessageDigest.getInstance("SHA-256");
+            byte[] hash = digest.digest(password.getBytes());
+            return Base64.encodeToString(hash, Base64.DEFAULT);
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
 
