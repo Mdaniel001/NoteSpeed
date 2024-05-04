@@ -14,71 +14,51 @@
         android:layout_height="450dp"
         android:layout_marginBottom="152dp"
         android:gravity="start|top"
-        android:hint="Escribe tu nota aquí..."
+        android:hint="@string/etNota"
         android:inputType="textMultiLine"
         android:minLines="5"
         android:padding="10dp"
         android:scrollbars="vertical"
+        android:textColorHint="#0C0A0A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.618"
+        app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/ivNotas4"
         android:layout_width="68dp"
         android:layout_height="47dp"
-        android:layout_marginBottom="736dp"
         android:contentDescription="@string/ivNotas4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintHorizontal_bias="0.19"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.088"
         app:srcCompat="@drawable/nota" />
 
     <TextView
         android:id="@+id/tvTituloNota2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="136dp"
         android:text="@string/tvTituloNota2"
         android:textColor="#10100F"
         android:textSize="36sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.525"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/ivUsuario8"
-        android:layout_width="81dp"
-        android:layout_height="88dp"
-        android:layout_marginTop="16dp"
-        android:contentDescription="@string/ivUsuario3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.907"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnGuardarNota"
-        android:layout_width="178dp"
-        android:layout_height="55dp"
-        android:layout_marginBottom="44dp"
-        android:backgroundTint="#F9B233"
-        android:text="@string/btnGuardarNota"
-        android:textColor="#120B0B"
-        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.758"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/ivNotas4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.088" />
 
     <EditText
         android:id="@+id/etDate"
-        android:layout_width="128dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="112dp"
+        android:layout_width="158dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="132dp"
         android:background="@drawable/editext_gris"
         android:ems="10"
         android:hint="@string/etFecha"
@@ -87,7 +67,18 @@
         android:textColor="#FFC107"
         android:textColorHint="#E91E63"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.879"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/etNombreNota"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivUsuario8"
+        android:layout_width="108dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/ivUsuario3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.943"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -95,7 +86,7 @@
         android:id="@+id/etNombreNota"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="132dp"
         android:background="@drawable/editext_gris"
         android:ems="10"
         android:hint="@string/etNombreNota"
@@ -103,19 +94,33 @@
         android:textAlignment="center"
         android:textColorHint="#100D0C"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintHorizontal_bias="0.134"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnGuardarNota"
+        android:layout_width="178dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="72dp"
+        android:backgroundTint="#F9B233"
+        android:text="@string/btnGuardarNota"
+        android:textColor="#120B0B"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toEndOf="@+id/btnSelecColor" />
 
     <ImageButton
         android:id="@+id/btnSelecColor"
         android:layout_width="76dp"
         android:layout_height="65dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="64dp"
         android:contentDescription="@string/btnSelecColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintHorizontal_bias="0.195"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/cromatico" />
 

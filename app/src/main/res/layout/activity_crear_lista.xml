@@ -12,23 +12,24 @@
         android:id="@+id/tvTituloLista2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="696dp"
         android:contentDescription="@string/ivLista"
         android:text="@string/tvTituloLista2"
         android:textColor="#090909"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079" />
 
     <ImageView
         android:id="@+id/ivLista"
         android:layout_width="53dp"
         android:layout_height="48dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="60dp"
         android:contentDescription="@string/ivLista"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.229"
+        app:layout_constraintEnd_toStartOf="@+id/tvTituloLista2"
+        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/lista" />
@@ -40,8 +41,7 @@
         android:layout_marginTop="44dp"
         android:contentDescription="@string/ivUsuario4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.884"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvTituloLista2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -63,18 +63,17 @@
         style="@style/SearchViewStyle"
         android:layout_width="183dp"
         android:layout_height="44dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.928"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/btnInsertarLista"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloLista2" />
 
     <ImageView
         android:id="@+id/ivTitulo8"
         android:layout_width="246dp"
         android:layout_height="72dp"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="52dp"
         android:contentDescription="@string/ivTitulo7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,7 +83,7 @@
         android:id="@+id/ivLista2"
         android:layout_width="67dp"
         android:layout_height="67dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="56dp"
         android:contentDescription="@string/ivLista2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,44 +94,42 @@
     <ListView
         android:id="@+id/lvListaTareas"
         android:layout_width="387dp"
-        android:layout_height="439dp"
+        android:layout_height="395dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="108dp"
+        android:layout_marginBottom="136dp"
         android:backgroundTint="#89BF17"
         android:contentDescription="@string/lvListaTareas"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnEliminarLista"
         android:layout_width="148dp"
         android:layout_height="56dp"
-        android:layout_marginBottom="548dp"
+        android:layout_marginTop="4dp"
         android:backgroundTint="#89BF17"
         android:text="@string/btnEliminarLista"
         android:textColor="#130707"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.102"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnInsertarLista" />
 
     <EditText
         android:id="@+id/etEliminarLista"
         android:layout_width="197dp"
         android:layout_height="55dp"
-        android:layout_marginBottom="548dp"
+        android:layout_marginTop="4dp"
         android:ems="10"
         android:hint="@string/etEliminarLista"
         android:inputType="text"
         android:textColor="#171515"
         android:textColorHint="#0E0C0C"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.994"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/btnEliminarLista"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -39,7 +39,7 @@ public class CrearNota extends AppCompatActivity {
 
     ///Metodo ir pantalla Notas Enumeradas
     private void irPantallaEditarNota(){
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, EditarNota.class);
         startActivity(intent);
     }
 

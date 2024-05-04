@@ -8,23 +8,13 @@
     android:background="@drawable/notas"
     tools:context=".EditarNotaNumerica">
 
-    <ImageView
-        android:id="@+id/ivUsuario8"
-        android:layout_width="81dp"
-        android:layout_height="88dp"
-        android:layout_marginTop="8dp"
-        android:contentDescription="@string/ivUsuario8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.948"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
     <EditText
         android:id="@+id/etIngresoTexto"
         android:layout_width="388dp"
         android:layout_height="110dp"
         android:layout_marginStart="31dp"
+        android:layout_marginTop="13dp"
         android:layout_marginBottom="464dp"
         android:background="@drawable/edittext_naranja"
         android:hint="@string/etIngresoTexto"
@@ -33,66 +23,58 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNombreNotaNumerica" />
 
     <Button
         android:id="@+id/btnEnumerarTexto"
         android:layout_width="219dp"
         android:layout_height="60dp"
-        android:layout_marginStart="132dp"
-        android:layout_marginEnd="114dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="#877B7B"
-        android:text="Enumerar texto"
+        android:text="@string/btnEnumerarTexto"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/tvTextoEnumerado"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.625"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etIngresoTexto" />
 
     <TextView
         android:id="@+id/tvTextoEnumerado"
-        android:layout_width="393dp"
-        android:layout_height="147dp"
-        android:layout_marginTop="428dp"
+        android:layout_width="356dp"
+        android:layout_height="168dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="224dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/ivNotaEnumerada3"
-        android:layout_width="72dp"
-        android:layout_height="74dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:contentDescription="@string/ivNotaEnumerada3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/diario" />
+        app:layout_constraintTop_toBottomOf="@+id/btnEnumerarTexto" />
 
     <ImageButton
         android:id="@+id/btnSelecColor3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="68dp"
         android:contentDescription="@string/btnSelectocolor3"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuardarNotaNumerica"
+        app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTextoEnumerado"
+        app:layout_constraintVertical_bias="0.81"
         app:srcCompat="@drawable/cromatico" />
 
     <Button
         android:id="@+id/btnGuardarNotaNumerica"
         android:layout_width="171dp"
         android:layout_height="55dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="88dp"
         android:backgroundTint="#877B7B"
         android:text="@string/btnGuardarNotaNumerica"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintHorizontal_bias="0.774"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -109,21 +91,45 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.011" />
+        app:layout_constraintVertical_bias="0.039" />
+
+    <ImageView
+        android:id="@+id/ivUsuario8"
+        android:layout_width="81dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/ivUsuario8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.945"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivNotaEnumerada3"
+        android:layout_width="72dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="11dp"
+        android:contentDescription="@string/ivNotaEnumerada3"
+        app:layout_constraintEnd_toStartOf="@+id/tvTituloNotaEnumerada2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/diario" />
 
     <EditText
         android:id="@+id/etNombreNotaNumerica"
         android:layout_width="248dp"
         android:layout_height="64dp"
-        android:layout_marginTop="156dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/editext_gris"
         android:ems="10"
         android:hint="@string/etNombreNotaEnumerada"
         android:inputType="text"
         android:textColorHint="#090606"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloNotaEnumerada2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,6 +12,7 @@
         android:id="@+id/tvTituloLista2"
         android:layout_width="217dp"
         android:layout_height="81dp"
+        android:layout_marginTop="46dp"
         android:layout_marginBottom="680dp"
         android:contentDescription="@string/ivLista"
         android:text="@string/tvTituloNotaEnumerada"
@@ -21,83 +22,85 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.431"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/ivNotaEnumerada"
         android:layout_width="48dp"
         android:layout_height="61dp"
-        android:layout_marginTop="44dp"
         android:contentDescription="@string/ivNotaEnumerada"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvTituloLista2"
+        app:layout_constraintHorizontal_bias="0.642"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.061"
         app:srcCompat="@drawable/diario" />
 
     <ImageView
         android:id="@+id/ivUsuario8"
         android:layout_width="84dp"
         android:layout_height="84dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
         android:contentDescription="@string/ivUsuario4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.948"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvTituloLista2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etNotaEnumerada"
         android:layout_width="214dp"
         android:layout_height="52dp"
-        android:layout_marginBottom="564dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="@string/etEliminarNotaEnumerada"
         android:inputType="text"
         android:textColorHint="#191212"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.944"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/btnInsertarNotaEnumerada"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
 
     <Button
         android:id="@+id/btnInsertarNotaEnumerada"
         android:layout_width="136dp"
         android:layout_height="54dp"
-        android:layout_marginBottom="616dp"
+        android:layout_marginTop="12dp"
         android:backgroundTint="#B58383"
         android:text="@string/btnInsertarNotaEnumerada"
         android:textColor="#130F0F"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloLista2" />
 
     <SearchView
         android:id="@+id/searchView"
         style="@style/SearchViewStyle"
-        android:layout_width="190dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="144dp"
+        android:layout_width="220dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.832"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btnInsertarNotaEnumerada"
+        app:layout_constraintTop_toBottomOf="@+id/ivUsuario8" />
 
     <Button
         android:id="@+id/btnEliminarNotaEnumerada"
         android:layout_width="135dp"
         android:layout_height="52dp"
-        android:layout_marginBottom="564dp"
         android:backgroundTint="#B58383"
         android:text="@string/btnEliminarNotaEnumerada"
         android:textColor="#100B0B"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.054"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnInsertarNotaEnumerada" />
 
     <ImageView
         android:id="@+id/ivTitulo8"

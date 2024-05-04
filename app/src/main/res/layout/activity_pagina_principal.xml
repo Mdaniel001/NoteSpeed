@@ -10,80 +10,29 @@
 
     <ImageView
         android:id="@+id/ivUsuario8"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="85dp"
+        android:layout_height="81dp"
         android:contentDescription="@string/ivUsuario2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.941"
+        app:layout_constraintHorizontal_bias="0.896"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.053" />
 
     <TextView
         android:id="@+id/tvSaludo2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_width="83dp"
+        android:layout_height="40dp"
         android:text="@string/tvSaludo2"
         android:textColor="#0B0A0A"
         android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintHorizontal_bias="0.167"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnIngresoNotas"
-        android:layout_width="281dp"
-        android:layout_height="95dp"
-        android:layout_marginBottom="540dp"
-        android:backgroundTint="#F9B233"
-        android:text="@string/btnIngresoNotas"
-        android:textColor="#0C0808"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnIngresoListas"
-        android:layout_width="282dp"
-        android:layout_height="94dp"
-        android:layout_marginBottom="432dp"
-        android:backgroundTint="#89BF17"
-        android:text="@string/btnIngresoListas"
-        android:textColor="#0E0B0B"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/ivListas"
-        android:layout_width="46dp"
-        android:layout_height="43dp"
-        android:layout_marginBottom="456dp"
-        android:contentDescription="@string/ivListas"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.193"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/lista" />
-
-    <ImageView
-        android:id="@+id/ivNotas"
-        android:layout_width="45dp"
-        android:layout_height="42dp"
-        android:layout_marginBottom="568dp"
-        android:contentDescription="@string/ivNotas"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.198"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/nota" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.078" />
 
     <ImageView
         android:id="@+id/ivTitulo6"
@@ -95,40 +44,96 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.623"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo9"
         app:srcCompat="@drawable/titulo" />
 
     <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="46dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="292dp"
-        android:contentDescription="@string/ivRecordatorio"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.025"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/diario" />
-
-    <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/ivLogo9"
         android:layout_width="203dp"
         android:layout_height="179dp"
-        android:layout_marginBottom="116dp"
+        android:layout_marginBottom="128dp"
+        android:contentDescription="@string/ivLogo9"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/logo" />
 
     <Button
-        android:id="@+id/btnNotasEnumeradas"
-        android:layout_width="277dp"
-        android:layout_height="85dp"
-        android:layout_marginBottom="336dp"
-        android:text="@string/btnNotasEnumeradas"
+        android:id="@+id/btnIngresoNotas"
+        android:layout_width="281dp"
+        android:layout_height="95dp"
+        android:layout_marginBottom="548dp"
+        android:backgroundTint="#F9B233"
+        android:text="@string/btnIngresoNotas"
+        android:textColor="#0C0808"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.464"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnIngresoListas"
+        android:layout_width="282dp"
+        android:layout_height="94dp"
+        android:layout_marginBottom="444dp"
+        android:backgroundTint="#89BF17"
+        android:text="@string/btnIngresoListas"
+        android:textColor="#0E0B0B"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivListas"
+        android:layout_width="46dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="468dp"
+        android:contentDescription="@string/ivListas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/lista" />
+
+    <ImageView
+        android:id="@+id/ivNotas"
+        android:layout_width="45dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="572dp"
+        android:contentDescription="@string/ivNotas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.172"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/nota" />
+
+    <Button
+        android:id="@+id/btnNotasEnumeradas"
+        android:layout_width="283dp"
+        android:layout_height="87dp"
+        android:layout_marginBottom="340dp"
+        android:backgroundTint="#957373"
+        android:text="@string/btnNotasEnumeradas"
+        android:textColor="#201414"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="38dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="360dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/diario" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,91 +12,93 @@
         android:id="@+id/tvTituloLista2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="740dp"
         android:contentDescription="@string/ivLista"
         android:text="@string/tvTituloLista"
         android:textColor="#090909"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.547"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/ivUsuario8"
-        android:layout_width="81dp"
-        android:layout_height="88dp"
-        android:layout_marginTop="4dp"
-        android:contentDescription="@string/ivUsuario6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.913"
+        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.052" />
 
     <ImageView
         android:id="@+id/ivLista"
         android:layout_width="53dp"
         android:layout_height="48dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="40dp"
         android:contentDescription="@string/ivLista3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.244"
+        app:layout_constraintHorizontal_bias="0.185"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/lista" />
 
-    <Button
-        android:id="@+id/btnInsertarLista"
-        android:layout_width="186dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="724dp"
-        android:backgroundTint="#89BF17"
-        android:text="@string/btnGuardarLista"
-        android:textColor="#121111"
-        android:textSize="20sp"
+
+    <ImageView
+        android:id="@+id/ivUsuario8"
+        android:layout_width="81dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/ivUsuario6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.874"
+        app:layout_constraintHorizontal_bias="0.91"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <ImageButton
         android:id="@+id/btnSelecColor"
         android:layout_width="70dp"
         android:layout_height="63dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="100dp"
         android:contentDescription="@string/btnSelecColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintHorizontal_bias="0.13"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/cromatico" />
 
+    <Button
+        android:id="@+id/btnInsertarLista"
+        android:layout_width="186dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="648dp"
+        android:backgroundTint="#89BF17"
+        android:text="@string/btnGuardarLista"
+        android:textColor="#121111"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.845"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/etDescripcionTarea"
-        android:layout_width="371dp"
-        android:layout_height="77dp"
+        android:layout_width="353dp"
+        android:layout_height="143dp"
         android:ems="10"
         android:hint="@string/etDescripcionTarea"
         android:inputType="text"
         android:textColorHint="#0B0808"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.327" />
+        app:layout_constraintVertical_bias="0.382" />
 
     <EditText
         android:id="@+id/etNombreLista"
         android:layout_width="211dp"
         android:layout_height="57dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="116dp"
         android:ems="10"
         android:hint="@string/etNombreLista"
         android:inputType="text"
         android:textColorHint="#100E0E"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.401"
+        app:layout_constraintHorizontal_bias="0.23"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
