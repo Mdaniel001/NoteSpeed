@@ -81,6 +81,11 @@
     <string name="lvNotas">Lista de Notas</string>
     <string name="btnEliminarNota">Eliminar </string>
     <string name="etEliminarNota">Ingrese Nombre </string>
+    <string name="btnVerNotas">Ver Notas </string>
+    <string name="btnBuscarNota">Buscar Notas </string>
+    <string name="etBuscarNota">Ingrese Nombre</string>
+
+
 
 
     <!--

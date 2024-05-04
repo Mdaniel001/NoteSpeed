@@ -67,6 +67,22 @@ public class UserDao {
         }
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // Método para hashear la contraseña utilizando SHA-256
     private String hashPassword(String password) {
         try {
