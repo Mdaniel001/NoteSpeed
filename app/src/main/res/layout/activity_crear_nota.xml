@@ -12,129 +12,159 @@
         android:id="@+id/tvTituloLista2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="59dp"
-        android:layout_marginBottom="700dp"
+        android:layout_marginBottom="712dp"
         android:text="@string/tvTituloNota"
         android:textColor="#090909"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <SearchView
-        android:id="@+id/svNota"
-        style="@style/SearchViewStyle"
-        android:layout_width="189dp"
-        android:layout_height="33dp"
-        android:queryHint="@string/svNota"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.884"
-        app:layout_constraintStart_toEndOf="@+id/btnInsertarNota"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.174" />
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnInsertarNota"
-        android:layout_width="141dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="128dp"
+        android:layout_width="153dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="520dp"
         android:backgroundTint="#F9B233"
         android:text="@string/btnInsertarNota"
         android:textColor="#090808"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/ivNota1"
         android:layout_width="68dp"
         android:layout_height="47dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginBottom="712dp"
         android:contentDescription="@string/ivNotas2"
-        app:layout_constraintEnd_toStartOf="@+id/tvTituloLista2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/nota" />
 
     <ImageView
         android:id="@+id/ivUsuario8"
         android:layout_width="81dp"
         android:layout_height="88dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="36dp"
         android:contentDescription="@string/ivUsuario3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.791"
         app:layout_constraintStart_toEndOf="@+id/tvTituloLista2"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/ivNota3"
-        android:layout_width="86dp"
-        android:layout_height="68dp"
-        android:layout_marginBottom="32dp"
-        android:contentDescription="@string/ivNotas3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.906"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/nota" />
 
     <ImageView
         android:id="@+id/ivTitulo7"
         android:layout_width="246dp"
         android:layout_height="72dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="76dp"
         android:contentDescription="@string/ivTitulo7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.108"
+        app:layout_constraintHorizontal_bias="0.088"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/titulo" />
 
+    <ImageView
+        android:id="@+id/ivNota3"
+        android:layout_width="86dp"
+        android:layout_height="68dp"
+        android:layout_marginBottom="76dp"
+        android:contentDescription="@string/ivNotas3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.895"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/nota" />
+
     <ListView
         android:id="@+id/lvNotas"
-        android:layout_width="372dp"
-        android:layout_height="448dp"
-        android:layout_marginBottom="112dp"
+        android:layout_width="380dp"
+        android:layout_height="342dp"
+        android:layout_marginBottom="160dp"
         android:contentDescription="@string/lvNotas"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.695"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnVerNota"
+        android:layout_width="156dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="520dp"
+        android:backgroundTint="#F9B233"
+        android:text="@string/btnVerNotas"
+        android:textColor="#131010"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.894"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etBuscarNota"
+        android:layout_width="355dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="628dp"
+        android:background="@drawable/editext_gris"
+        android:ems="10"
+        android:hint="@string/etBuscarNota"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textColor="#150F0F"
+        android:textColorHint="#0B0909"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.342"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etEliminarNota"
+        android:layout_width="222dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="576dp"
+        android:background="@drawable/editext_gris"
+        android:ems="10"
+        android:hint="@string/etEliminarNota"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textColorHint="#090707"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.847"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnEliminarNota"
-        android:layout_width="140dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="1dp"
+        android:layout_width="133dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="576dp"
         android:backgroundTint="#F9B233"
         android:text="@string/btnEliminarNota"
         android:textColor="#0E0909"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnInsertarNota" />
-
-    <EditText
-        android:id="@+id/etEliminarNota"
-        android:layout_width="207dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="9dp"
-        android:ems="10"
-        android:hint="@string/etEliminarNota"
-        android:inputType="text"
-        android:textColorHint="#090707"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/btnEliminarNota"
-        app:layout_constraintTop_toBottomOf="@+id/svNota"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnBuscarNota"
+        android:layout_width="57dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="624dp"
+        android:contentDescription="@string/btnBuscarNota"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/car_ui_icon_search" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

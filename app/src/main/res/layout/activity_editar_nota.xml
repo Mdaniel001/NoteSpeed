@@ -10,8 +10,8 @@
 
     <EditText
         android:id="@+id/etNota"
-        android:layout_width="317dp"
-        android:layout_height="450dp"
+        android:layout_width="325dp"
+        android:layout_height="385dp"
         android:layout_marginBottom="152dp"
         android:gravity="start|top"
         android:hint="@string/etNota"
@@ -44,14 +44,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="14dp"
         android:layout_marginEnd="136dp"
+        android:layout_marginBottom="692dp"
         android:text="@string/tvTituloNota2"
         android:textColor="#10100F"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivNotas4"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.088" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/ivNotas4" />
 
     <EditText
         android:id="@+id/etDate"
