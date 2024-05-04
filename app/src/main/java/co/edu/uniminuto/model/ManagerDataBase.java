@@ -1,5 +1,6 @@
 package co.edu.uniminuto.model;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -45,12 +46,12 @@ public class ManagerDataBase extends SQLiteOpenHelper{
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL(DELETE_TABLE);
-        onCreate(db);
         db.execSQL(DELETE_TABLE_NOTES);
-        onCreate(db);
         db.execSQL(DELETE_TABLE_TASK);
+
         onCreate(db);
     }
+
 
     public boolean checkLogin(String email, String password) {
         SQLiteDatabase db = this.getReadableDatabase();
@@ -62,6 +63,21 @@ public class ManagerDataBase extends SQLiteOpenHelper{
         db.close();
         return count > 0;
     }
+    @SuppressLint("Range")
+    public int getUserIdByEmail(String email) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "SELECT use_id FROM " + TABLE_USERS +
+                " WHERE use_email = ?";
+        Cursor cursor = db.rawQuery(query, new String[]{email});
+        int userId = -1;
+        if (cursor.moveToFirst()) {
+            userId = cursor.getInt(cursor.getColumnIndex("use_id"));
+        }
+        cursor.close();
+        db.close();
+        return userId;
+    }
+
 
 
 

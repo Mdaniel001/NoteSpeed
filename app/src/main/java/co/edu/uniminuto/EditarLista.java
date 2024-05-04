@@ -44,8 +44,18 @@ public class EditarLista extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        int userId = getIntent().getIntExtra("USER_ID", -1);
+        user_id = String.valueOf(userId);
         initObject();
         context = this;
+        btnInsertarLista.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (getData()) {
+                    createTaks(v);
+                }
+            }
+        });
     }
 
     public boolean getData() {
@@ -63,19 +73,19 @@ public class EditarLista extends AppCompatActivity {
         return true;
     }
 
-    private void createTaks(View view){
+    private void createTaks(View view) {
         getData();
         String user = user_id;
-        Tasks tasks = new Tasks(tituloTarea,tituloLista,fechaTarea,descriptionTarea,user);
+        Tasks tasks = new Tasks(tituloTarea, tituloLista, fechaTarea, descriptionTarea, user);
         TasksDao tasksDao = new TasksDao(context, view);
         tasksDao.insertTasks(tasks);
-
     }
+
     private void initObject(){
         etLista = findViewById(R.id.etNombreLista);
-        etTituloTasks = findViewById(R.id.etNombreNota);
+        etTituloTasks = findViewById(R.id.etNombreTarea);
         etDateTasks = findViewById(R.id.etFechaTarea);
-        etLista = findViewById(R.id.etDescripcionTarea);
-        btnInsertarLista= findViewById(R.id.btnInsertarLista);
+        etDescriptionsTaks = findViewById(R.id.etDescripcionTarea);
+        btnInsertarLista = findViewById(R.id.btnInsertarLista);
     }
 }
