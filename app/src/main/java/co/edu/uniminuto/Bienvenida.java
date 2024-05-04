@@ -19,12 +19,14 @@ public class Bienvenida extends AppCompatActivity {
     //declaro los objetos
     private Button btnSiguiente2;
     private ImageView ivUsuario6;
+    private int id;
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_bienvenida);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -32,6 +34,8 @@ public class Bienvenida extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        int userId = getIntent().getIntExtra("USER_ID", -1);
+        id = userId;
         initObject();
         // Obtenemos  la instancia de Registro.java
         Registro registro = new Registro();
@@ -71,6 +75,8 @@ public class Bienvenida extends AppCompatActivity {
 
     private void irPatanllaPrincipal(){
         Intent intent = new Intent(this, PaginaPrincipal.class);
+
+        intent.putExtra("USER_ID", id);
         startActivity(intent);
     }
 

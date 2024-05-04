@@ -86,10 +86,12 @@ public class MainActivity extends AppCompatActivity {
         String hashedPassword = hashPassword(password);
 
         ManagerDataBase managerDataBase = new ManagerDataBase(this);
+        int userId = managerDataBase.getUserIdByEmail(usuario);
         if (managerDataBase.checkLogin(usuario, hashedPassword)) {
             Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
 
             Intent intent = new Intent(this, Bienvenida.class);
+            intent.putExtra("USER_ID", userId);
             startActivity(intent);
         } else {
             Toast.makeText(this, "Correo o contraseña incorrectos", Toast.LENGTH_SHORT).show();

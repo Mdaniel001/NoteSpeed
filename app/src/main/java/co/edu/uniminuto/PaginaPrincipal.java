@@ -14,7 +14,7 @@ public class PaginaPrincipal extends AppCompatActivity {
     private Button btnIngresoNotas;
     private Button btnIngresoListas;
     private Button btnNotasEnumeradas;
-
+    private int id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +25,8 @@ public class PaginaPrincipal extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        int userId = getIntent().getIntExtra("USER_ID", -1);
+        id = userId;
         initObjects();
 
         // Initialize button listeners
@@ -50,6 +52,7 @@ public class PaginaPrincipal extends AppCompatActivity {
 
     private void irPantallaListas() {
         Intent intent = new Intent(this, CrearLista.class);
+        intent.putExtra("USER_ID", id);
         startActivity(intent);
     }
 
