@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
@@ -14,11 +15,20 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import co.edu.uniminuto.entity.Note;
+import co.edu.uniminuto.model.NoteDao;
+
 public class EditarNota extends AppCompatActivity {
 
     private EditText etNota;
+    private EditText etDate;
+    private Button btnGuardarNota;
+    private EditText etNombreNota;
     private ImageButton btnSelecColor;
 
+    private String date;
+    private String nonbreNota;
+     private String nota;
 
 
 
@@ -41,7 +51,39 @@ public class EditarNota extends AppCompatActivity {
                 showColorDialog();
             };
         });
+
+
+        btnGuardarNota.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                guardarNota();
+            };
+        });
+
+
+
+
+
+
     }
+
+    //metodo Guardar Nota
+    private void guardarNota() {
+
+        String title = etNombreNota.getText().toString();
+        String descriptions = etNota.getText().toString();
+        String dateNote = etDate.getText().toString();
+
+        Note note = new Note(title, descriptions, dateNote);
+        NoteDao.insertNote(note);
+
+
+    }
+
+
+
+
+
 
 
 
@@ -63,10 +105,18 @@ public class EditarNota extends AppCompatActivity {
     }
 
 
+
+
+
+
+
     //llamamos los Objetos
     private void initObject(){
         etNota = findViewById(R.id.etNota);
         btnSelecColor=findViewById(R.id.btnSelecColor);
+        etDate=findViewById(R.id.etDate);
+        etNombreNota=findViewById(R.id.etNombreNota);
+        btnGuardarNota=findViewById(R.id.btnGuardarNota);
 
 
     }

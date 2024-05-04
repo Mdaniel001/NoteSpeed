@@ -5,6 +5,9 @@ public class Note {
     private String descriptions;
     private String dateNote;
 
+
+
+
     public Note(String title, String descriptions, String dateNote) {
         this.title = title;
         this.descriptions = descriptions;
