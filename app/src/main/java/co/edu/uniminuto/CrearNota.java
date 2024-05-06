@@ -100,11 +100,10 @@ public class CrearNota extends AppCompatActivity {
 
     // Método para buscar la nota por su nombre y mostrarla para editar
     private void buscarYMostrarNota(String nombreNota) {
-        // Método para buscar y mostrar nota
+
         Note notaEncontrada = noteDao.getNoteByTitleAndStatus(nombreNota);
         if (notaEncontrada != null) {
-            // Aquí puedes abrir una nueva actividad o un cuadro de diálogo para editar la nota
-            // Por ejemplo, abrir una nueva actividad para editar la nota:
+
             Intent intent = new Intent(this, EditarNota.class);
             intent.putExtra("nota", (CharSequence) notaEncontrada); // Pasar la nota a la actividad de edición
             startActivity(intent);
@@ -117,13 +116,13 @@ public class CrearNota extends AppCompatActivity {
     //Metodo para Mostar Notas en la Lista
 
     private void mostrarNotasEnLista() {
-        // Obtener lista de notas del DAO
+
         ArrayList<Note> listaNotas = noteDao.getNotaList();
 
-        // Crear un adapter para asociar la lista de notas a la ListView
+
         ArrayAdapter<Note> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listaNotas);
 
-        // Establecer el adapter en la ListView
+
         lvNotas.setAdapter(adapter);
     }
 
